@@ -12,7 +12,8 @@ app = Flask(__name__)
 
 def chat_with_gpt3(message):
     response = openai.Completion.create(
-        engine="text-davinci-003", 
+        engine="text-davinci-002", 
+        model = "gpt-3.5-turbo",
         prompt=message, 
         max_tokens=150
     )
